@@ -1,0 +1,14 @@
+2024-09-11 14:10:41 [main] INFO  base.BaseTest - Starting the valid login test.
+2024-09-11 14:10:56 [main] INFO  pages.LoginPage - Entering username: manish.test1726044042923@test.com
+2024-09-11 14:10:56 [main] INFO  pages.LoginPage - Entering username: Test@1234
+2024-09-11 14:10:56 [main] INFO  pages.LoginPage - Clicking SignIn Button.
+2024-09-11 14:11:03 [main] INFO  base.BaseTest - Login test passed.
+2024-09-11 14:11:53 [main] INFO  base.BaseTest - Starting the valid login test.
+2024-09-11 14:12:08 [main] INFO  pages.LoginPage - Entering username: manish.test1726044114875@test.com
+2024-09-11 14:12:08 [main] INFO  pages.LoginPage - Entering username: Test@1234
+2024-09-11 14:12:08 [main] INFO  pages.LoginPage - Clicking SignIn Button.
+2024-09-11 14:12:15 [main] INFO  base.BaseTest - Login test passed.
+2024-09-11 17:14:24 [main] INFO  base.BaseTest - Starting the valid login test.
+2024-09-11 17:14:37 [main] INFO  pages.LoginPage - Entering username: manish.test1726055065680@test.com
+2024-09-11 17:14:37 [main] INFO  pages.LoginPage - Entering password: Test@1234
+2024-09-11 17:14:37 [main] INFO  pages.LoginPage - Clicking SignIn Button.

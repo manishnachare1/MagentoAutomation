@@ -5,16 +5,21 @@ import org.openqa.selenium.By;
 //package tests;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.CreateAccountPage;
 import pages.LoginPage;
+import utilities.ScreenshotUtility;
 
 public class AccountCreationTest extends BaseTest {
 
 	@Test
 	public void testCreateNewAccountAndLogin() {
+		
+		  logger.info("Starting the valid login test.");
 		// Navigate to Create Account page
 		driver.findElement(By.linkText("Create an Account")).click();
 
@@ -47,7 +52,7 @@ public class AccountCreationTest extends BaseTest {
 		loginPage.clickSignIn();
 
 		// Validate successful login
-		String expectedWelcomeMessage = "Welcome, Manish Test!";
+		String expectedWelcomeMessage = "Welcome, Manish Testtt!";
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -57,5 +62,16 @@ public class AccountCreationTest extends BaseTest {
 		String actualWelcomeMessage = driver
 				.findElement(By.xpath("//div[@class='panel header']//li[@class='greet welcome']")).getText();
 		Assert.assertTrue(actualWelcomeMessage.contains(expectedWelcomeMessage), "Login failed.");
+		 logger.info("Login test passed.");
+		 
+		  
 	}
+	
+	@AfterMethod
+    public void takeScreenshotOnFailure(ITestResult result) {
+        // Check if the test failed
+        if (ITestResult.FAILURE == result.getStatus()) {
+            ScreenshotUtility.captureScreenshot(driver, result.getName());
+        }
+    }
 }
