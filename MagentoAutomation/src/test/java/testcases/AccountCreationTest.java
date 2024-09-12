@@ -52,7 +52,7 @@ public class AccountCreationTest extends BaseTest {
 		loginPage.clickSignIn();
 
 		// Validate successful login
-		String expectedWelcomeMessage = "Welcome, Manish Testtt!";
+		String expectedWelcomeMessage = "Welcome, Manish Test!";
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
