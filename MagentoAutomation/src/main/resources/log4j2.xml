@@ -17,12 +17,13 @@
         <Root level="info">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
+            <appender-ref ref="Console"/>
         </Root>
 
         <!-- You can add additional loggers for specific classes or packages -->
-        <Logger name="com.yourproject" level="debug" additivity="false">
+        <!-- <Logger name="com.yourproject" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
-        </Logger>
+        </Logger>-->
     </Loggers>
 </Configuration>
